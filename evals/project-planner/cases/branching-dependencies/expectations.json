@@ -1,0 +1,18 @@
+{
+  "id": "branching-dependencies",
+  "plan_dir": "docs/plans/eval-plan",
+  "required_files": [
+    "PRD.md",
+    "Milestone.md",
+    "tasks/M1.md"
+  ],
+  "must_recognize": [
+    "Models shared schema as prerequisite to both endpoint tasks.",
+    "Preserves independent endpoint branches and joins them for integration verification.",
+    "Readiness depends on accepted prerequisites."
+  ],
+  "must_not_claim": [
+    "Adds an unnecessary dependency between the two endpoint implementations.",
+    "Omits either prerequisite from integration work."
+  ]
+}

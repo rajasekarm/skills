@@ -1,0 +1,16 @@
+{
+  "id": "existing-feature",
+  "plan_dir": "docs/plans/eval-plan",
+  "required_files": [
+    "PRD.md",
+    "Milestone.md",
+    "tasks/M1.md"
+  ],
+  "must_recognize": [
+    "Recognizes src/auth.py as implemented authentication and reuses it.",
+    "Plans CSV export and observable access-control and CSV checks."
+  ],
+  "must_not_claim": [
+    "Invents a need to rebuild authentication."
+  ]
+}

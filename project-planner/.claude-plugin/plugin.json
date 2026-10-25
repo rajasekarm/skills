@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "project-planner",
+  "version": "1.0.0",
+  "description": "Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["planning", "prd", "milestones", "tasks", "roadmap"],
+  "skills": [
+    "./"
+  ]
+}

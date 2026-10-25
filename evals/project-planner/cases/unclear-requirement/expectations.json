@@ -1,0 +1,17 @@
+{
+  "id": "unclear-requirement",
+  "plan_dir": "docs/plans/eval-plan",
+  "required_files": [
+    "PRD.md",
+    "Milestone.md",
+    "tasks/M1.md"
+  ],
+  "must_recognize": [
+    "Records invoice retention as an unresolved decision.",
+    "Keeps deletion work affected by retention Draft or Blocked; can propose a bounded investigation."
+  ],
+  "must_not_claim": [
+    "Invents a retention policy or legal requirement.",
+    "Marks policy-dependent implementation Ready."
+  ]
+}

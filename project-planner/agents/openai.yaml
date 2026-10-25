@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Planner"
+  short_description: "Human-readable plans with milestone task tables"
+  default_prompt: "Use $project-planner to create a human-readable PRD.md, Milestone.md, and lowercase tasks/M1.md files containing T1/T2 task tables with dependencies, completion conditions, and verification details."

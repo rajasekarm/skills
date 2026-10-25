@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "rajasekarm-skills",
+  "owner": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "metadata": {
+    "description": "Rajasekar's personal collection of agent skills for Claude Code and Codex.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "project-planner",
+      "source": "./project-planner",
+      "description": "Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["planning", "prd", "milestones", "tasks", "roadmap"]
+    }
+  ]
+}

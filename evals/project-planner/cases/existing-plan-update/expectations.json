@@ -1,0 +1,18 @@
+{
+  "id": "existing-plan-update",
+  "plan_dir": "docs/plans/report-export",
+  "required_files": [
+    "PRD.md",
+    "Milestone.md",
+    "tasks/M1.md"
+  ],
+  "must_recognize": [
+    "Preserves R1, M1/T1, and D1 meaning while adding JSON scope.",
+    "Updates the existing directory rather than creating a competing plan.",
+    "Retains working links and includes observable JSON acceptance."
+  ],
+  "must_not_claim": [
+    "Silently reassigns old identities to unrelated work.",
+    "Claims existing export implementation is complete."
+  ]
+}
