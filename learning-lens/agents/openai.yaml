@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning Lens"
+  short_description: "Turn project ideas into focused learning experiments"
+  default_prompt: "Use $learning-lens to clarify what I want to learn from this project idea and scope the smallest experiment that demonstrates it."

@@ -11,6 +11,14 @@
   },
   "plugins": [
     {
+      "name": "learning-lens",
+      "source": "./learning-lens",
+      "description": "Turn technical project ideas into precise learning questions and small, measurable experiments.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["learning", "scoping", "experiments", "systems-design"]
+    },
+    {
       "name": "project-planner",
       "source": "./project-planner",
       "description": "Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence.",

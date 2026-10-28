@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "learning-lens",
+  "version": "1.0.0",
+  "description": "Turn technical project ideas into precise learning questions and small, measurable experiments.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["learning", "scoping", "experiments", "systems-design"],
+  "skills": [
+    "./"
+  ]
+}
