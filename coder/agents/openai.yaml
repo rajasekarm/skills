@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coder"
+  short_description: "Avoid common LLM coding mistakes"
+  default_prompt: "Use $coder while making this change: state assumptions, keep it simple, touch only what's needed, and define how we'll verify it."

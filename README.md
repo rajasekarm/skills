@@ -6,6 +6,7 @@ My personal collection of agent skills. Each top-level folder is one skill that 
 | --- | --- | --- |
 | [learning-lens](learning-lens/SKILL.md) | Clarify what you want to learn from a project idea and scope the smallest useful experiment. | Claude: `/learning-lens` · Codex: `$learning-lens` |
 | [project-planner](project-planner/SKILL.md) | Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence. | Claude: `/project-planner` · Codex: `$project-planner` |
+| [coder](coder/SKILL.md) | Coding guardrails against common LLM mistakes: surface assumptions, keep it simple, make surgical changes, verify against goals. | Claude: `/coder` · Codex: `$coder` |
 
 Run `./install.sh --list` for the live list.
 
