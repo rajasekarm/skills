@@ -25,6 +25,14 @@
       "version": "1.0.0",
       "category": "productivity",
       "keywords": ["planning", "prd", "milestones", "tasks", "roadmap"]
+    },
+    {
+      "name": "coder",
+      "source": "./coder",
+      "description": "Behavioral guidelines that reduce common LLM coding mistakes.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["guidelines", "best-practices", "coding"]
     }
   ]
 }
