@@ -32,7 +32,7 @@
       "description": "Behavioral guidelines that reduce common LLM coding mistakes.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": ["guidelines", "best-practices", "coding"]
+      "keywords": ["guidelines", "best-practices", "coding", "functional", "declarative"]
     }
   ]
 }

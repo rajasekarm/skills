@@ -2,14 +2,14 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "coder",
   "version": "1.0.0",
-  "description": "Behavioral guidelines that reduce common LLM coding mistakes: think before coding, simplicity first, surgical changes, goal-driven execution.",
+  "description": "Behavioral guidelines that reduce common LLM coding mistakes: think before coding, simplicity first, surgical changes, goal-driven execution, functional and declarative code.",
   "author": {
     "name": "rajasekarm",
     "url": "https://github.com/rajasekarm"
   },
   "repository": "https://github.com/rajasekarm/skills",
   "license": "MIT",
-  "keywords": ["guidelines", "best-practices", "coding"],
+  "keywords": ["guidelines", "best-practices", "coding", "functional", "declarative"],
   "skills": [
     "./"
   ]
