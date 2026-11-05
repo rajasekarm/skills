@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Writer"
+  short_description: "One-file plans with milestones, task graph, and checks"
+  default_prompt: "Use $plan-writer to write one plan.md with a goal, a dependency graph, milestones with demos, and per-milestone task tables with dependencies and concrete verification."

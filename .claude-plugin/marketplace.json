@@ -19,20 +19,20 @@
       "keywords": ["learning", "scoping", "experiments", "systems-design"]
     },
     {
-      "name": "project-planner",
-      "source": "./project-planner",
+      "name": "plan-writer",
+      "source": "./plan-writer",
       "description": "Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence.",
       "version": "1.0.0",
       "category": "productivity",
       "keywords": ["planning", "milestones", "tasks", "dependencies", "roadmap"]
     },
     {
-      "name": "coder",
-      "source": "./coder",
-      "description": "Behavioral guidelines that reduce common LLM coding mistakes.",
+      "name": "plan-runner",
+      "source": "./plan-runner",
+      "description": "Execute a plan.md from plan-writer: the main agent coordinates subagents or a Workflow, re-verifies every task, and updates the plan one task at a time.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": ["guidelines", "best-practices", "coding", "functional", "declarative"]
+      "keywords": ["planning", "execution", "subagents", "workflow", "coordinator"]
     }
   ]
 }

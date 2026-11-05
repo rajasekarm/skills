@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Runner"
+  short_description: "Coordinate subagents to execute a plan.md"
+  default_prompt: "Use $plan-runner to execute docs/plans/<slug>/plan.md: coordinate one task at a time, re-run each task's Verify, update the plan after each verified task, and stop at each milestone Demo."
