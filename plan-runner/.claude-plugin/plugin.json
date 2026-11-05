@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "plan-runner",
+  "version": "1.0.0",
+  "description": "Execute a plan.md from plan-writer: the main agent coordinates subagents or a Workflow, re-verifies every task, and updates the plan one task at a time.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["planning", "execution", "subagents", "workflow", "coordinator"],
+  "skills": [
+    "./"
+  ]
+}

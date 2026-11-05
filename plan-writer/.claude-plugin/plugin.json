@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
-  "name": "project-planner",
+  "name": "plan-writer",
   "version": "1.0.0",
   "description": "Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence.",
   "author": {

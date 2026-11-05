@@ -1,11 +1,11 @@
 ---
-name: project-planner
+name: plan-writer
 description: "Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence. Use to plan a feature, refactor, or project for people or coding agents. Produces planning documents only; execution is separate."
 metadata:
   short-description: One-file plans with milestones, task graph, and checks
 ---
 
-# Project Planner
+# Plan Writer
 
 Write one `plan.md` that a person can review and a coding agent can execute task by task. The plan holds the outcome, the dependency graph, the decisions an agent cannot safely make alone, and how to verify each step. Ordinary coding choices stay with the implementer.
 
@@ -27,6 +27,7 @@ Use the existing plan directory, or `docs/plans/<plan-slug>/plan.md`. Follow [th
 5. **Done when** — checkboxes for the overall acceptance. Use requirement IDs (`R1`) only when the plan already has them or the user asks.
 6. **Decisions** — choices already made and why (`D1: … because …`). Omit if empty.
 7. **Open questions** — each with the tasks it blocks. Write `None` if none.
+8. **Progress** — write `- Not started`. `plan-runner` appends one verified line per finished task.
 
 No PRD, separate milestone file, per-task files, YAML frontmatter, or agent-only copy.
 
@@ -68,6 +69,6 @@ Leave out step-by-step code changes, names, and internal structure. If notes out
 - Every Verify is concrete; no check is reported as passed unless it was observed.
 - Links and `file:line` citations resolve.
 
-Return the plan path, the next Ready task, the blockers, and the checks you performed. Stop after planning unless execution was authorized.
+Return the plan path, the next Ready task, the blockers, and the checks you performed. Stop after planning. To execute the plan, the user runs `plan-runner` with the plan path.
 
 When updating an existing plan, keep existing IDs and decisions meaning what they meant; add new IDs instead of reusing old ones. For handing work to another agent or machine, read [worker handoff](references/worker-handoff.md). For several projects or plans, read [multi-project planning](references/multi-project.md). For installation, read [installation](references/installation.md).

@@ -50,3 +50,7 @@ M1/T1 → (M1/T2 ∥ M1/T3) → M2/T1
 ## Open questions
 
 - {{question}}: blocks M1/T2.
+
+## Progress
+
+- Not started
