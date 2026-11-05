@@ -21,10 +21,10 @@
     {
       "name": "project-planner",
       "source": "./project-planner",
-      "description": "Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence.",
+      "description": "Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": ["planning", "prd", "milestones", "tasks", "roadmap"]
+      "keywords": ["planning", "milestones", "tasks", "dependencies", "roadmap"]
     },
     {
       "name": "coder",

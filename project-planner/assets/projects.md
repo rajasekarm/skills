@@ -16,8 +16,8 @@ Use this registry to find each project's code and plans. Keep machine-local chec
 
 ### Plans
 
-| Plan | Outcome | PRD location in the planning repository |
+| Plan | Outcome | Plan location in the planning repository |
 | --- | --- | --- |
-| {{plan_id}} | {{project_or_feature}} | `docs/plans/{{plan_id}}-{{plan_slug}}/PRD.md` |
+| {{plan_id}} | {{project_or_feature}} | `docs/plans/{{plan_slug}}/plan.md` |
 
 Add sections for the actual projects being coordinated. Project IDs are stable; plan IDs are unique within their project. Register additional code repositories explicitly when a project spans them.
