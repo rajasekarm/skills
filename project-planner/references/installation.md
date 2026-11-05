@@ -17,8 +17,8 @@ Inspect an existing installation before replacing it. Use the same source revisi
 
 For example:
 
-> Use project-planner to create a human-readable PRD.md and Milestone.md. Put all tasks for M1 in tasks/M1.md as a table with T1, T2, dependencies, completion conditions, and status. Keep each task's verification details in that same file. Prepare the next milestone for a worker without claiming it has run.
+> Use project-planner to write docs/plans/csv-export/plan.md: milestones with demos, a task table per milestone with dependencies and concrete verification, and the dependency graph. Planning only.
 
 Project instructions can identify this workflow and the team's format examples. Installing a skill does not change execution permissions or migrate existing plans.
 
-For several projects, use [multi-project planning](multi-project.md): shared standards, separate project plans, optional readable registry/portfolio, and `PROJECT/PLAN/M1/T1` references. Make the same documents available to reviewers and workers. A custom Python/LangGraph runtime must load them explicitly; this skill does not implement a runtime loader, queue, or dispatcher.
+For several projects, use [multi-project planning](multi-project.md): one `plan.md` per plan, an optional registry/portfolio, and `PROJECT/PLAN/M1/T1` references. Make the same documents available to reviewers and workers. A custom Python/LangGraph runtime must load them explicitly; this skill does not implement a runtime loader, queue, or dispatcher.

@@ -5,7 +5,7 @@ My personal collection of agent skills. Each top-level folder is one skill that 
 | Skill | What it does | Invoke |
 | --- | --- | --- |
 | [learning-lens](learning-lens/SKILL.md) | Clarify what you want to learn from a project idea and scope the smallest useful experiment. | Claude: `/learning-lens` · Codex: `$learning-lens` |
-| [project-planner](project-planner/SKILL.md) | Write human-readable PRDs, milestone overviews, and per-milestone task tables grounded in repository evidence. | Claude: `/project-planner` · Codex: `$project-planner` |
+| [project-planner](project-planner/SKILL.md) | Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence. | Claude: `/project-planner` · Codex: `$project-planner` |
 | [coder](coder/SKILL.md) | Coding guardrails against common LLM mistakes: surface assumptions, keep it simple, make surgical changes, verify against goals, write functional and declarative code. | Claude: `/coder` · Codex: `$coder` |
 
 Run `./install.sh --list` for the live list.
@@ -86,7 +86,3 @@ Both hosts read every installed skill's `name` and `description` into the agent'
 5. Validate: `claude plugin validate .` and `claude plugin validate <skill-name>`.
 
 `install.sh` discovers skills automatically, so no changes there.
-
-## Evaluating project-planner
-
-See [the eval setup](evals/project-planner/README.md) for five isolated fixture cases, a dependency/link/structure checker, and a quality-review rubric. The harness uses Python's standard library; model runs are performed separately in fresh workspaces.
