@@ -45,7 +45,7 @@ One table per milestone with exactly these columns:
 - **Do** — one line, one reviewable outcome (about one PR). At most 7 tasks per milestone; split larger work into another plan.
 - **Files** — existing paths to change, or proposed ones marked `(new)`.
 - **Depends** — `None`, or comma-separated `T1` / `M1/T1`. Every real input must trace to a producing task or to existing code. Never drop a real edge to make work look parallel; never add a fake one.
-- **Verify** — a concrete check: a command plus expected output, or an action plus observation. Include the relevant failure case. Not "works correctly".
+- **Verify** — a concrete check: a command plus expected output, or an action plus observation. Include the relevant failure case. Not "works correctly". Test commands are focused on the task's files, using the project's runner and its targeting (`npm test -- src/routes/summary.spec.ts`, `pytest tests/test_summary.py::test_empty`, `go test ./internal/summary`), never the whole suite (`npm test`, `pytest`, `go test ./...`). If the task needs a full-suite run, write "full suite" explicitly, usually only in a milestone Demo. If a task has no tests to target, make adding them part of the task or use a type check, lint, or manual action instead.
 - **Status** — `Draft`, `Ready`, `In progress`, `In review`, `Done`, or `Blocked`. Status means readiness now: a task is Ready only when every dependency is Done and it has no open decision.
 
 ## Notes: implementation details that belong in the plan
@@ -67,6 +67,7 @@ Leave out step-by-step code changes, names, and internal structure. If notes out
 - Dependencies exist, have no cycles, and include every input each task needs.
 - No Ready task has an unfinished dependency or open decision.
 - Every Verify is concrete; no check is reported as passed unless it was observed.
+- Every test command in Verify targets the task's files; a full suite appears only where it says "full suite".
 - Links and `file:line` citations resolve.
 
 Return the plan path, the next Ready task, the blockers, and the checks you performed. Stop after planning. To execute the plan, the user runs `plan-runner` with the plan path.
