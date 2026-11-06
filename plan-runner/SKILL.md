@@ -30,7 +30,7 @@ Repeat until the scope is finished or you must stop:
 5. **Verify each task, one at a time,** in Graph order:
    - Set Status to `In review`.
    - Read the diff. Reject changes outside the task's Files or scope.
-   - Run the task's Verify yourself. Do not accept the subagent's report as evidence.
+   - Run the task's Verify yourself, scoped as in [Focused tests](#focused-tests). Do not accept the subagent's report as evidence.
    - **Pass:** commit if allowed, then immediately record it (see Updating the plan). Only then move to the next task.
    - **Fail:** send the failure output back to a subagent once. If it fails again, set `Blocked`, record why, and stop.
 6. **Milestone gate.** When every task in the milestone is Done, run its **Demo** yourself, record the result, and stop. Ask the user to accept the milestone. Continue to the next milestone only after they accept and say to continue.
@@ -44,7 +44,19 @@ Each subagent knows only what you send. Include:
 - The plan path, task reference (`M1/T2`), its table row, and its notes.
 - The plan's Goal, Context, and Decisions, plus accepted outputs of its dependencies (commit or files).
 - The files it may change. "Do not edit plan.md. Do not commit (unless told to in workflow mode). Do not change unrelated code."
-- "Run the Verify check and return: files changed, the exact Verify command and output, and any blocker or assumption."
+- "Run only the tests for the files you changed, never the whole suite, in a single non-watch run. Run the Verify check the same way and return: files changed, the exact commands and output, and any blocker or assumption."
+
+## Focused tests
+
+Run tests for the change, not the whole suite. Full suites are slow, and stray runners keep running after an agent stops.
+
+1. **Scope from the diff.** Take the changed files (`git diff --name-only` against the task's starting point) and run only their tests:
+   - Spec files the task changed or added, plus specs that sit beside or import the changed source files.
+   - Use the runner's own targeting when it has one: `jest <paths>` or `jest --findRelatedTests <changed files>`, `vitest run <paths>` or `vitest related <changed files>`, `pytest <test files or path::test>`, `go test ./<changed packages>`, `cargo test -p <crate> <filter>`.
+   - Use the project's own script and config (for example `npm test -- <paths>`), so setup and environment match.
+2. **Narrow a broad Verify.** If a task's Verify is the whole suite (`npm test`, `pytest`, `go test ./...`), run the focused equivalent instead and record the command you actually ran in the Progress line. Run a full suite only when the plan's Verify or Demo explicitly says "full suite", or the user asks.
+3. **No focused tests found.** Do not fall back to the full suite. Say so, run the task's other checks (type check, lint, or the manual action in Verify) on the changed files, and report the missing coverage in the Progress line.
+4. **One clean run.** No watch mode (`--watch`, `--watchAll`, `vitest` without `run`); pass the CI flag the runner needs (`CI=1`, `--runInBand` for Jest when parallel workers hang). Run tests in the foreground. If a run hangs or is interrupted, stop its processes before continuing, and never leave a test runner behind when you stop.
 
 ## Updating the plan
 

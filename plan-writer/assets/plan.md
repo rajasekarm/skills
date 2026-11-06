@@ -18,7 +18,7 @@ M1/T1 → (M1/T2 ∥ M1/T3) → M2/T1
 
 | Task | Do | Files | Depends | Verify | Status |
 | --- | --- | --- | --- | --- | --- |
-| T1 | {{one_reviewable_outcome}} | `{{path}}` | None | `{{command}}` → {{expected_output}} | Ready |
+| T1 | {{one_reviewable_outcome}} | `{{path}}` | None | `{{focused_test_command_for_these_files}}` → {{expected_output}} | Ready |
 | T2 | {{one_reviewable_outcome}} | `{{path}}` | T1 | {{action}} → {{observation}}; {{failure_case}} | Draft |
 | T3 | {{one_reviewable_outcome}} | `{{path}}` (new) | T1 | {{action}} → {{observation}} | Draft |
 

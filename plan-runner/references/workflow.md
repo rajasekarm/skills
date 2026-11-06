@@ -15,6 +15,8 @@ Pass the batch as `args`, an actual JSON array (not a string):
 ]
 ```
 
+Each `verify` must be the focused command for that task's files (see Focused tests in SKILL.md), never the whole suite: parallel worktrees each running a full suite multiply the cost and leave stray runners.
+
 Each brief must tell the subagent to commit its change on its worktree branch (so the work survives worktree cleanup) and to return that branch name. It still must not edit `plan.md`.
 
 ## Script
