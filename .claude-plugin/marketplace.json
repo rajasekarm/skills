@@ -33,6 +33,14 @@
       "version": "1.0.0",
       "category": "productivity",
       "keywords": ["planning", "execution", "subagents", "workflow", "coordinator"]
+    },
+    {
+      "name": "opportunity-discovery",
+      "source": "./opportunity-discovery",
+      "description": "Staff engineer's companion: find and rank what an engineering-led team should build next from system, user, org, and industry signals.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["staff-engineer", "platform", "prioritization", "discovery", "roadmap"]
     }
   ]
 }
