@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Opportunity Discovery"
+  short_description: "Staff engineer's companion: rank what to build next from real signals"
+  default_prompt: "Use $opportunity-discovery to gather signals for this team or repo and give me a ranked shortlist of what to build next, with evidence."

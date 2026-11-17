@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "opportunity-discovery",
+  "version": "1.0.0",
+  "description": "Staff engineer's companion: find and rank what an engineering-led team should build next from system, user, org, and industry signals.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["staff-engineer", "platform", "prioritization", "discovery", "roadmap"],
+  "skills": [
+    "./"
+  ]
+}
