@@ -7,6 +7,7 @@ My personal collection of agent skills. Each top-level folder is one skill that 
 | [plan-writer](plan-writer/SKILL.md) | Write one focused `plan.md`: goal, dependency graph, milestones with demos, and tasks with concrete checks. Planning only. | Claude: `/plan-writer` · Codex: `$plan-writer` |
 | [plan-runner](plan-runner/SKILL.md) | Execute a `plan.md`: the main agent coordinates, subagents implement, every task is re-verified and recorded in the plan. | Claude: `/plan-runner <plan.md>` · Codex: `$plan-runner <plan.md>` |
 | [learning-lens](learning-lens/SKILL.md) | Clarify what you want to learn from a project idea and scope the smallest useful experiment. | Claude: `/learning-lens` · Codex: `$learning-lens` |
+| [knowledge-buckets](knowledge-buckets/SKILL.md) | Keep one file per domain with four buckets: facts (memorize vs. look up), procedures, a 12-box mental model, and a questions log that only grows. | Claude: `/knowledge-buckets` · Codex: `$knowledge-buckets` |
 | [opportunity-discovery](opportunity-discovery/SKILL.md) | Staff engineer's companion: gather system, user, org, and industry signals and rank the top 3 things to build next, with evidence. | Claude: `/opportunity-discovery` · Codex: `$opportunity-discovery` |
 
 Run `./install.sh --list` for the live list.

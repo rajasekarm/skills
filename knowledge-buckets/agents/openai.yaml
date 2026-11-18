@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Buckets"
+  short_description: "Keep one file per domain: facts, procedures, a 12-box model, and a questions log"
+  default_prompt: "Use $knowledge-buckets to create or update the knowledge file for this domain and tell me what is still unclear."
