@@ -9,6 +9,7 @@ My personal collection of agent skills. Each top-level folder is one skill that 
 | [learning-lens](learning-lens/SKILL.md) | Clarify what you want to learn from a project idea and scope the smallest useful experiment. | Claude: `/learning-lens` · Codex: `$learning-lens` |
 | [knowledge-buckets](knowledge-buckets/SKILL.md) | Keep one file per domain with four buckets: facts (memorize vs. look up), procedures, a 12-box mental model, and a questions log that only grows. | Claude: `/knowledge-buckets` · Codex: `$knowledge-buckets` |
 | [opportunity-discovery](opportunity-discovery/SKILL.md) | Staff engineer's companion: gather system, user, org, and industry signals and rank the top 3 things to build next, with evidence. | Claude: `/opportunity-discovery` · Codex: `$opportunity-discovery` |
+| [requirement-cases](requirement-cases/SKILL.md) | Turn a raw requirement (Slack, ticket) into numbered requirements and every happy, negative, data, and non-functional case, grounded in the repo, before planning. | Claude: `/requirement-cases` · Codex: `$requirement-cases` |
 
 Run `./install.sh --list` for the live list.
 

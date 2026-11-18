@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirement Cases"
+  short_description: "Find every happy, negative, data, and non-functional case in a requirement before planning"
+  default_prompt: "Use $requirement-cases to analyse this requirement, list every case grounded in the repo, and ask me about anything ambiguous before planning."
