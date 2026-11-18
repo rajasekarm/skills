@@ -41,6 +41,14 @@
       "version": "1.0.0",
       "category": "productivity",
       "keywords": ["staff-engineer", "platform", "prioritization", "discovery", "roadmap"]
+    },
+    {
+      "name": "requirement-cases",
+      "source": "./requirement-cases",
+      "description": "Turn a raw requirement from Slack or a ticket into numbered requirements and a complete set of happy, negative, data, and non-functional cases before planning.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["requirements", "edge-cases", "negative-cases", "analysis", "planning"]
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "requirement-cases",
+  "version": "1.0.0",
+  "description": "Turn a raw requirement from Slack or a ticket into numbered requirements and a complete set of happy, negative, data, and non-functional cases before planning.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["requirements", "edge-cases", "negative-cases", "analysis", "planning"],
+  "skills": [
+    "./"
+  ]
+}
