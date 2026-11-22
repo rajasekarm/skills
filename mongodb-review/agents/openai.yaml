@@ -1,0 +1,4 @@
+interface:
+  display_name: "MongoDB Review"
+  short_description: "Read-only review of MongoDB indexes, queries, writes, and migrations"
+  default_prompt: "Use $mongodb-review to review the MongoDB changes on this branch and give a PASS/FAIL verdict with file:line findings."
