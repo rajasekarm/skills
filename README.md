@@ -70,6 +70,7 @@ The plan also has Goal, Context, Done when, Decisions, Open questions, and a Pro
 /plan-runner docs/plans/csv-export/plan.md          # whole plan, milestone by milestone
 /plan-runner docs/plans/csv-export/plan.md M1       # one milestone
 /plan-runner docs/plans/csv-export/plan.md M1/T2    # one task (good for a first try or a retry)
+/plan-runner docs/plans/csv-export/plan.md auto     # whole plan, unattended, on branch plan/csv-export
 ```
 
 What the coordinator does:
@@ -83,6 +84,8 @@ What the coordinator does:
    Dependents become Ready only then.
 6. On failure, retries once, then marks the task Blocked with the reason and stops.
 7. At the end of each milestone, runs the Demo and **stops for your acceptance**.
+
+**Auto mode** (`auto`) is for when you planned deeply and want to hand off the rest. The runner works on one branch, `plan/<slug>`, commits each verified task without asking, and continues past a milestone whose Demo passes, logging it as awaiting your acceptance. It still stops on an open decision, a second failure, a Verify it cannot run, or out-of-scope work. It never pushes, opens a PR, or deploys: you review the branch at the end.
 
 Rerunning the same command resumes from the plan's Status column. It never pushes, opens PRs, or deploys.
 
