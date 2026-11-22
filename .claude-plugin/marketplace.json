@@ -49,6 +49,14 @@
       "version": "1.0.0",
       "category": "productivity",
       "keywords": ["requirements", "edge-cases", "negative-cases", "analysis", "planning"]
+    },
+    {
+      "name": "mongodb-review",
+      "source": "./mongodb-review",
+      "description": "Read-only review of MongoDB changes: indexes, unbounded queries, N+1, document growth, transactions, injection, and migration safety.",
+      "version": "1.0.0",
+      "category": "development",
+      "keywords": ["mongodb", "mongoose", "review", "database", "performance"]
     }
   ]
 }

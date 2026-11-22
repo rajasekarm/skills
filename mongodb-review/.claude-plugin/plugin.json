@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "mongodb-review",
+  "version": "1.0.0",
+  "description": "Read-only review of MongoDB changes: indexes, unbounded queries, N+1, document growth, transactions, injection, and migration safety.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["mongodb", "mongoose", "review", "database", "performance"],
+  "skills": [
+    "./"
+  ]
+}

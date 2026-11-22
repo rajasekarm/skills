@@ -11,7 +11,30 @@ My personal collection of agent skills. Each top-level folder is one skill that 
 | [opportunity-discovery](opportunity-discovery/SKILL.md) | Staff engineer's companion: gather system, user, org, and industry signals and rank the top 3 things to build next, with evidence. | Claude: `/opportunity-discovery` · Codex: `$opportunity-discovery` |
 | [requirement-cases](requirement-cases/SKILL.md) | Turn a raw requirement (Slack, ticket) into numbered requirements and every happy, negative, data, and non-functional case, grounded in the repo, before planning. | Claude: `/requirement-cases` · Codex: `$requirement-cases` |
 
+| [mongodb-review](mongodb-review/SKILL.md) | Read-only review of MongoDB changes: indexes, unbounded queries, N+1, document growth, transactions, injection, and migration safety. PASS/FAIL with `file:line` findings. | Claude: `/mongodb-review` · Codex: `$mongodb-review` |
+
 Run `./install.sh --list` for the live list.
+
+## Agents
+
+Agents are workers with their own fresh context and limited tools: they take a brief and return a report. Use one when the job should be independent of the session that did the work (a reviewer) or would flood your main context. Keep anything that needs back-and-forth with you as a skill.
+
+| Agent | What it does | Rules from |
+| --- | --- | --- |
+| [db-reviewer](agents/db-reviewer/) | Read-only MongoDB reviewer: PASS/FAIL verdict with `file:line` findings. Never edits code. | [mongodb-review](mongodb-review/SKILL.md) |
+
+Each agent is a folder under `agents/` with a thin wrapper per host and no rules of its own:
+
+```text
+agents/db-reviewer/
+  claude.md    # Claude Code agent: frontmatter (name, description, tools) + "follow the mongodb-review skill"
+  codex.toml   # Codex custom agent: name, description, developer_instructions pointing at the same skill
+  requires     # skills this agent needs, one per line; install.sh installs them with the agent
+```
+
+The rules live once, in the skill, so fixing the skill fixes the agent on both hosts. Use the skill directly (`/mongodb-review`) when you want to discuss the review; use the agent when you only want the verdict, for example from `plan-runner` or in parallel with other work.
+
+In Claude Code, ask for it by name ("use the db-reviewer agent on this branch") or check it with `/agents`. In Codex, ask Codex to spawn `db_reviewer`.
 
 ## Plan, then run
 
@@ -97,6 +120,8 @@ git clone git@github.com:rajasekarm/skills.git ~/skills
 cd ~/skills
 ./install.sh                          # all skills, user-wide, Claude Code + Codex (symlinks)
 ./install.sh plan-writer plan-runner  # just these skills
+./install.sh db-reviewer              # one agent, plus the skills it requires
+./install.sh --only agents            # agents only (--only skills for skills only)
 ./install.sh --host codex             # only one host
 ```
 
@@ -106,7 +131,7 @@ To install into a single project instead (copies, so the project stays self-cont
 
 ```bash
 cd /path/to/project
-~/skills/install.sh --scope project                 # -> .claude/skills/ and .agents/skills/
+~/skills/install.sh --scope project                 # skills -> .claude/skills/, .agents/skills/; agents -> .claude/agents/, .codex/agents/
 ~/skills/install.sh --scope project --host claude   # only Claude Code
 ```
 
@@ -137,6 +162,8 @@ $skill-installer install plan-runner from rajasekarm/skills
 | --- | --- | --- |
 | Claude Code | `~/.claude/skills/<skill>/` | `.claude/skills/<skill>/` |
 | Codex | `~/.codex/skills/<skill>/` | `.agents/skills/<skill>/` |
+| Claude Code agents | `~/.claude/agents/<agent>.md` | `.claude/agents/<agent>.md` |
+| Codex agents | `~/.codex/agents/<agent>.toml` | `.codex/agents/<agent>.toml` |
 
 Both hosts read every installed skill's `name` and `description` and load the full `SKILL.md` only when a request matches, so keep descriptions specific about *when* to use a skill.
 
