@@ -1,0 +1,4 @@
+interface:
+  display_name: "First Principles"
+  short_description: "Separate real constraints from conventions and rebuild a design from what is actually true"
+  default_prompt: "Use $first-principles to break this problem down to its real constraints, challenge the conventions, size the fundamentals, and propose alternatives built from the constraints alone."

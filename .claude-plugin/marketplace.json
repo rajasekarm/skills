@@ -57,6 +57,14 @@
       "version": "1.0.0",
       "category": "development",
       "keywords": ["mongodb", "mongoose", "review", "database", "performance"]
+    },
+    {
+      "name": "first-principles",
+      "source": "./first-principles",
+      "description": "Reason about an engineering problem from first principles: separate real constraints from inherited conventions, challenge each convention, size the fundamentals, and rebuild alternatives from the constraints alone.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["first-principles", "reasoning", "system-design", "architecture", "constraints"]
     }
   ]
 }
