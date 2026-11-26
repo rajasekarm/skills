@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "first-principles",
+  "version": "1.0.0",
+  "description": "Reason about an engineering problem from first principles: separate real constraints from inherited conventions, challenge each convention, size the fundamentals, and rebuild alternatives from the constraints alone.",
+  "author": {
+    "name": "rajasekarm",
+    "url": "https://github.com/rajasekarm"
+  },
+  "repository": "https://github.com/rajasekarm/skills",
+  "keywords": ["first-principles", "reasoning", "system-design", "architecture", "constraints"],
+  "skills": [
+    "./"
+  ]
+}

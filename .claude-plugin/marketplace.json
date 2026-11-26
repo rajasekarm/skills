@@ -16,12 +16,7 @@
       "description": "Turn technical project ideas into precise learning questions and small, measurable experiments.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": [
-        "learning",
-        "scoping",
-        "experiments",
-        "systems-design"
-      ]
+      "keywords": ["learning", "scoping", "experiments", "systems-design"]
     },
     {
       "name": "plan-writer",
@@ -29,13 +24,7 @@
       "description": "Write one focused plan.md with milestones, a dependency graph, and verifiable tasks, grounded in repository evidence.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": [
-        "planning",
-        "milestones",
-        "tasks",
-        "dependencies",
-        "roadmap"
-      ]
+      "keywords": ["planning", "milestones", "tasks", "dependencies", "roadmap"]
     },
     {
       "name": "plan-runner",
@@ -43,13 +32,7 @@
       "description": "Execute a plan.md from plan-writer: the main agent coordinates subagents or a Workflow, re-verifies every task, and updates the plan one task at a time.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": [
-        "planning",
-        "execution",
-        "subagents",
-        "workflow",
-        "coordinator"
-      ]
+      "keywords": ["planning", "execution", "subagents", "workflow", "coordinator"]
     },
     {
       "name": "opportunity-discovery",
@@ -57,13 +40,7 @@
       "description": "Staff engineer's companion: find and rank what an engineering-led team should build next from system, user, org, and industry signals.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": [
-        "staff-engineer",
-        "platform",
-        "prioritization",
-        "discovery",
-        "roadmap"
-      ]
+      "keywords": ["staff-engineer", "platform", "prioritization", "discovery", "roadmap"]
     },
     {
       "name": "requirement-cases",
@@ -71,13 +48,15 @@
       "description": "Turn a raw requirement from Slack or a ticket into numbered requirements and a complete set of happy, negative, data, and non-functional cases before planning.",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": [
-        "requirements",
-        "edge-cases",
-        "negative-cases",
-        "analysis",
-        "planning"
-      ]
+      "keywords": ["requirements", "edge-cases", "negative-cases", "analysis", "planning"]
+    },
+    {
+      "name": "first-principles",
+      "source": "./first-principles",
+      "description": "Reason about an engineering problem from first principles: separate real constraints from inherited conventions, challenge each convention, size the fundamentals, and rebuild alternatives from the constraints alone.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["first-principles", "reasoning", "system-design", "architecture", "constraints"]
     }
   ]
 }
